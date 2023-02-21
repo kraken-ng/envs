@@ -1,0 +1,41 @@
+version: '3'
+services:
+  php8-apache:
+    # Apache 2.4.53 PHP 8.0.18
+    image: php:8.0-apache
+    container_name: php8-apache
+    ports:
+      - "8000:80"
+    volumes:
+      - ./apache/index.php:/var/www/html/index.php
+      - ../../agents/standard/agent.php:/var/www/html/agent_st.php
+      - ../../agents/c2/agent.php:/var/www/html/agent_c2.php
+    networks:
+      - apps
+  php7-apache:
+    # Apache 2.4.25 PHP 7.0.33
+    image: php:7.0-apache
+    container_name: php7-apache
+    ports:
+      - "8001:80"
+    volumes:
+      - ./apache/index.php:/var/www/html/index.php
+      - ../../agents/standard/agent.php:/var/www/html/agent_st.php
+      - ../../agents/c2/agent.php:/var/www/html/agent_c2.php
+    networks:
+      - apps
+  php5-apache:
+    # Apache 2.4.10 PHP 5.4.45
+    image: php:5.4-apache
+    container_name: php5-apache
+    ports:
+      - "8002:80"
+    volumes:
+      - ./apache/index.php:/var/www/html/index.php
+      - ../../agents/standard/agent.php:/var/www/html/agent_st.php
+      - ../../agents/c2/agent.php:/var/www/html/agent_c2.php
+    networks:
+      - apps
+networks:
+  apps:
+    driver: "bridge"
