@@ -7,6 +7,7 @@ PHP envs:
 - [ ] OctoberCMS
 
 Java envs:
-- [ ] Liferay
+- [x] Tomcat
+- [x] Liferay
 - [ ] Oracle WebLogic
 - [ ] JBoss

@@ -1,124 +1,23 @@
 version: '3'
 services:
-  java17-tomcat:
-    # Tomcat 10.1.5 JDK 17
-    image: tomcat:jdk17
-    container_name: java17-tomcat
+  tomcat:
+    # Tomcat 8.5.41 JDK 1.8
+    image: tomcat:alpine
+    container_name: tomcat
     ports:
       - "8080:8080"
     volumes:
       - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
-  java16-tomcat:
-    # Tomcat 10.1.0-M14 JDK 16
-    image: tomcat:10.1-jdk16-temurin
-    container_name: java16-tomcat
+  liferay:
+    # Liferay Community Edition Portal 7.2.0 CE GA1 (Mueller / Build 7200 / June 4, 2019) JDK 1.8
+    image: liferay/portal:7.2.0-ga1
+    container_name: liferay
     ports:
       - "8081:8080"
     volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java15-tomcat:
-    # Tomcat 9.0.45 JDK 15
-    image: tomcat:jdk15
-    container_name: java15-tomcat
-    ports:
-      - "8082:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java14-tomcat:
-    # Tomcat 9.0.39 JDK 14
-    image: tomcat:jdk14-openjdk-oracle
-    container_name: java14-tomcat
-    ports:
-      - "8083:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java13-tomcat:
-    # Tomcat 9.0.33 JDK 13
-    image: tomcat:9.0.33-jdk13-openjdk-buster
-    container_name: java13-tomcat
-    ports:
-      - "8084:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java12-tomcat:
-    # Tomcat 8.5.47 JDK 12
-    image: tomcat:jdk12-adoptopenjdk-openj9
-    container_name: java12-tomcat
-    ports:
-      - "8085:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java11-tomcat:
-    # Tomcat 10.1.5 JRE 11
-    image: tomcat:jre11
-    container_name: java11-tomcat
-    ports:
-      - "8086:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java10-tomcat:
-    # Tomcat 9.0.13 JRE 10
-    image: tomcat:9-jre10
-    container_name: java10-tomcat
-    ports:
-      - "8087:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java9-tomcat:
-    # Tomcat 9.0.8 JRE 9
-    image: tomcat:9-jre9
-    container_name: java9-tomcat
-    ports:
-      - "8088:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java8-tomcat:
-    # Tomcat 9.0.20 JRE 1.8
-    image: tomcat:9.0.20-jre8-alpine
-    container_name: java8-tomcat
-    ports:
-      - "8089:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java7-tomcat:
-    # Tomcat 7.0.94 JRE 1.7
-    image: tomcat:7-jre7-alpine
-    container_name: java7-tomcat
-    ports:
-      - "8090:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-    networks:
-      - apps
-  java6-tomcat:
-    # Tomcat 7.0.91 JRE 1.6
-    image: gksoftware/zulu-openjdk-tomcat:7-jre6
-    container_name: java6-tomcat
-    ports:
-      - "8091:8080"
-    volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
-      - ../../test/agents/test.java:/usr/local/tomcat/webapps/ROOT/test.jsp
+      - ../../agents/standard/agent.java:/opt/liferay/tomcat-9.0.17/webapps/ROOT/agent_st.jsp
     networks:
       - apps
 networks:

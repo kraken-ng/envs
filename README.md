@@ -22,6 +22,11 @@ The existing environments are distributed in:
   - Tomcat 9.0.20 + JRE 1.8
   - Tomcat 7.0.94 + JRE 1.7
   - Tomcat 7.0.91 + JRE 1.6
+  - Liferay Community Edition Portal 7.4.0 CE GA1 (Cavanaugh / Build 7400 / April 6, 2021) + JDK 1.8
+  - Liferay Community Edition Portal 7.2.0 CE GA1 (Mueller / Build 7200 / June 4, 2019) + JDK 1.8
+  - Liferay Community Edition Portal 7.0.6 GA7 (Wilberforce / Build 7006 / April 17, 2018) + JDK 1.8
+  - Liferay Portal Community Edition 6.2 CE GA6 (Newton / Build 6205 / January 6, 2016) + JDK 1.8
+  - Liferay Portal Community Edition 6.1.2 CE (Paton / Build 6102 / August 2, 2013) + JDK 1.8
 
 > Currently there is no environment for testing .NET agents. The easiest way to do this is deploying an Internet Information Services (IIS) on a Windows machine and uploading the .NET agent as an aspx file. Future releases will incorporate deployment environments using Vagrant in order to cover all technologies.
 

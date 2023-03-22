@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jboss:
+    image: jboss/wildfly
+    container_name: "jboss"
+    entrypoint: /bin/sh -c "jar -cvf /opt/jboss/wildfly/standalone/deployments/agent.war /opt/jboss/wildfly/standalone/deployments/index.jsp && /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0"
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+    volumes:
+      - "../../../agents/standard/agent.java:/opt/jboss/wildfly/standalone/deployments/index.jsp"

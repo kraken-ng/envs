@@ -1,0 +1,55 @@
+version: '3'
+services:
+  liferay74:
+    # Liferay Community Edition Portal 7.4.0 CE GA1 (Cavanaugh / Build 7400 / April 6, 2021) JDK 1.8
+    image: liferay/portal:7.4.0-ga1
+    container_name: liferay74
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-9.0.43/webapps/ROOT/agent_st.jsp
+    networks:
+      - apps
+  liferay72:
+    # Liferay Community Edition Portal 7.2.0 CE GA1 (Mueller / Build 7200 / June 4, 2019) JDK 1.8
+    image: liferay/portal:7.2.0-ga1
+    container_name: liferay72
+    ports:
+      - "8081:8080"
+    volumes:
+      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-9.0.17/webapps/ROOT/agent_st.jsp
+    networks:
+      - apps
+  liferay70:
+    # Liferay Community Edition Portal 7.0.6 GA7 (Wilberforce / Build 7006 / April 17, 2018) JDK 1.8
+    image: liferay/portal:7.0.6-ga7
+    container_name: liferay70
+    ports:
+      - "8082:8080"
+    volumes:
+      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-8.0.32/webapps/ROOT/agent_st.jsp
+    networks:
+      - apps
+  liferay62:
+    # Liferay Portal Community Edition 6.2 CE GA6 (Newton / Build 6205 / January 6, 2016) JDK 1.8
+    image: liferay/portal:6.2.5-ga6
+    container_name: liferay62
+    ports:
+      - "8083:8080"
+    volumes:
+      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-7.0.62/webapps/ROOT/agent_st.jsp
+    networks:
+      - apps
+  liferay61:
+    # Liferay Portal Community Edition 6.1.2 CE (Paton / Build 6102 / August 2, 2013) JDK 1.8
+    image: liferay/portal:6.1.2-ga3
+    container_name: liferay61
+    ports:
+      - "8084:8080"
+    volumes:
+      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-7.0.40/webapps/ROOT/agent_st.jsp
+    networks:
+      - apps
+networks:
+  apps:
+    driver: "bridge"
