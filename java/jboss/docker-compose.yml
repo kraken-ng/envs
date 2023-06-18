@@ -8,4 +8,4 @@ services:
       - "8080:8080"
       - "9990:9990"
     volumes:
-      - "../../../agents/standard/agent.java:/opt/jboss/wildfly/standalone/deployments/index.jsp"
+      - "../../../agents/standard/jsp/agent_classloader.java:/opt/jboss/wildfly/standalone/deployments/index.jsp"

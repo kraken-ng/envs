@@ -8,8 +8,8 @@ services:
       - "8000:80"
     volumes:
       - ./apache/index.php:/var/www/html/index.php
-      - ../../agents/standard/agent.php:/var/www/html/agent_st.php
-      - ../../agents/c2/agent.php:/var/www/html/agent_c2.php
+      - ../../agents/standard/php/agent_eval.php:/var/www/html/agent_st.php
+      - ../../agents/c2/php/agent_eval.php:/var/www/html/agent_c2.php
     networks:
       - apps
   php7-apache:
@@ -20,8 +20,8 @@ services:
       - "8001:80"
     volumes:
       - ./apache/index.php:/var/www/html/index.php
-      - ../../agents/standard/agent.php:/var/www/html/agent_st.php
-      - ../../agents/c2/agent.php:/var/www/html/agent_c2.php
+      - ../../agents/standard/php/agent_eval.php:/var/www/html/agent_st.php
+      - ../../agents/c2/php/agent_eval.php:/var/www/html/agent_c2.php
     networks:
       - apps
   php5-apache:
@@ -32,8 +32,8 @@ services:
       - "8002:80"
     volumes:
       - ./apache/index.php:/var/www/html/index.php
-      - ../../agents/standard/agent.php:/var/www/html/agent_st.php
-      - ../../agents/c2/agent.php:/var/www/html/agent_c2.php
+      - ../../agents/standard/php/agent_eval.php:/var/www/html/agent_st.php
+      - ../../agents/c2/php/agent_eval.php:/var/www/html/agent_c2.php
     networks:
       - apps
 networks:

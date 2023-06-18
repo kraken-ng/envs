@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   liferay:
@@ -17,7 +17,7 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - ../../agents/standard/agent.java:/opt/liferay/tomcat-9.0.17/webapps/ROOT/agent_st.jsp
+      - ../../agents/standard/jsp/agent_classloader.java:/opt/liferay/tomcat-9.0.17/webapps/ROOT/agent_st.jsp
     networks:
       - apps
 networks:

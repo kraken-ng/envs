@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-9.0.43/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/opt/liferay/tomcat-9.0.43/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   liferay72:
@@ -17,7 +17,7 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-9.0.17/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/opt/liferay/tomcat-9.0.17/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   liferay70:
@@ -27,7 +27,7 @@ services:
     ports:
       - "8082:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-8.0.32/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/opt/liferay/tomcat-8.0.32/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   liferay62:
@@ -37,7 +37,7 @@ services:
     ports:
       - "8083:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-7.0.62/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/opt/liferay/tomcat-7.0.62/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   liferay61:
@@ -47,7 +47,7 @@ services:
     ports:
       - "8084:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/opt/liferay/tomcat-7.0.40/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/opt/liferay/tomcat-7.0.40/webapps/ROOT/agent_st.jsp
     networks:
       - apps
 networks:

@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java16-tomcat:
@@ -17,7 +17,7 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java15-tomcat:
@@ -27,7 +27,7 @@ services:
     ports:
       - "8082:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java14-tomcat:
@@ -37,7 +37,7 @@ services:
     ports:
       - "8083:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java13-tomcat:
@@ -47,7 +47,7 @@ services:
     ports:
       - "8084:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java12-tomcat:
@@ -57,7 +57,7 @@ services:
     ports:
       - "8085:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java11-tomcat:
@@ -67,7 +67,7 @@ services:
     ports:
       - "8086:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java10-tomcat:
@@ -77,7 +77,7 @@ services:
     ports:
       - "8087:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java9-tomcat:
@@ -87,7 +87,7 @@ services:
     ports:
       - "8088:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java8-tomcat:
@@ -97,7 +97,7 @@ services:
     ports:
       - "8089:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java7-tomcat:
@@ -107,7 +107,7 @@ services:
     ports:
       - "8090:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
   java6-tomcat:
@@ -117,7 +117,7 @@ services:
     ports:
       - "8091:8080"
     volumes:
-      - ../../../agents/standard/agent.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
+      - ../../../agents/standard/jsp/agent_classloader.java:/usr/local/tomcat/webapps/ROOT/agent_st.jsp
     networks:
       - apps
 networks:
